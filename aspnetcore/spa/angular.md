@@ -188,8 +188,8 @@ At the same time, there are significant drawbacks to enabling SSR. It adds compl
 * Enabling the `BuildServerSideRenderer` build flag causes your *node_modules* directory to publish. This folder contains 20,000+ files, which increases deployment time.
 * To run your code in a Node.js environment, it can't rely on the existence of browser-specific JavaScript APIs such as `window` or `localStorage`. If your code (or some third-party library you reference) tries to use these APIs, you'll get an error during SSR. For example, don't use jQuery because it references browser-specific APIs in many places. To prevent errors, you must either avoid SSR or avoid browser-specific APIs or libraries. You can wrap any calls to such APIs in checks to ensure they aren't invoked during SSR. For example, use a check such as the following in JavaScript or TypeScript code:
 
-```javascript
-if (typeof window !== 'undefined') {
-    // Call browser-specific APIs here
-}
-```
+    ```javascript
+    if (typeof window !== 'undefined') {
+        // Call browser-specific APIs here
+    }
+    ```
