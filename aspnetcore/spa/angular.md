@@ -176,7 +176,7 @@ options.SupplyData = (context, data) =>
 };
 ```
 
-The `SupplyData` callback lets you pass arbitrary, per-request, JSON-serializable data (for example, strings, booleans, or numbers). Your *main.server.ts* code receives this as `params.data`. For example, the preceding code sample passes a boolean value as `params.data.isHttpsRequest` into the `createServerRenderer` callback. You can pass this to other parts of your app in any way supported by Angular. For example, see how that file passes the `BASE_URL` value to any component whose constructor is declared to receive it.
+The `SupplyData` callback lets you pass arbitrary, per-request, JSON-serializable data (for example, strings, booleans, or numbers). Your *main.server.ts* code receives this as `params.data`. For example, the preceding code sample passes a boolean value as `params.data.isHttpsRequest` into the `createServerRenderer` callback. You can pass this to other parts of your app in any way supported by Angular. For example, see how *main.server.ts* passes the `BASE_URL` value to any component whose constructor is declared to receive it.
 
 ### Drawbacks of SSR
 
